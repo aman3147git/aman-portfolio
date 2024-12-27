@@ -45,7 +45,7 @@ const About = () => {
     
   ]
   return (
-    <div id='/about' className='max-w-4xl mx-auto p-4   text-white mt-[90px]    '>
+    <div id='/about' className='max-w-4xl mx-auto p-4   text-white mt-[20px] md:mt-[80px]   '>
         <h1 className='uppercase font-bold text-4xl'>About Me</h1>
         <div className=''>
         

@@ -24,7 +24,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="max-w-4xl mx-auto flex justify-between p-4 shadow-lg items-center  text-white">
+    <div className="max-w-4xl mx-auto flex justify-between p-2 md:p-4 shadow-lg items-center  text-white">
       <h1 className="animate__animated animate__flipInY text-3xl font-bold p-3 bg-gradient-to-tr from-purple-800 to-orange-600 rounded-full hover:scale-105 hover:brightness-75 ">
         Portfolio.
       </h1>
@@ -73,8 +73,8 @@ const Navbar = () => {
       )}
       <div className="text-center animate__animated animate__zoomInRight">
         <a
-          href="/Aman_chaudhary_resume.pdf" 
-          download="Aman_chaudhary_resume.pdf"
+          href="/Aman-resume1.pdf" 
+          download="Aman-resume1.pdf"
           className="p-3 bg-gradient-to-tr from-blue-500 to-green-400 rounded-md text-white font-bold hover:opacity-80"
         >
          Resume

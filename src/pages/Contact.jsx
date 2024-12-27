@@ -1,60 +1,4 @@
-// import React, { useState } from 'react'
 
-// const Contact = () => {
-//   const [formdata, setFormdata] = useState({
-//     subject: '',
-//     email: 'amanc3147@gmail.com',  
-//     message: ''
-//   });
-    
-//   console.log(formdata);
-  
-//   const handlechange=(e)=>{
-//     setFormdata({...formdata,[e.target.id]:e.target.value});
-//   }
-//   const submitHandler = (e) => {
-//     e.preventDefault();
-  
-//     const email = formdata.email;
-//     const subject = `Regarding : ${formdata.subject}`;
-//     const body = formdata.message;
-    
-    
-//     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  
-    
-//     window.location.href = mailtoLink;
-  
-    
-//     setFormdata({
-//       subject: '',
-//       email: 'amanc3147@gmail.com',
-//       message: ''
-//     });
-//   };
-//   return (
-//     <div className="">
-//       <h1 className='font-bold text-3xl uppercase max-w-4xl mx-auto  mt-[90px]'>Contact me</h1>
-//     <div id='/contact' className=' p-4 text-white flex flex-col gap-4 md:flex-row justify-between'>
-//       <div className="mt-3 md:mt-[60px]">
-//           <h1>I'd love to hear from you! Whether you have a question, want to discuss a project, or just want to say hello, feel free to drop me a message.<br/> Looking forward to connecting with you!</h1>
-          
-//       </div>
-//       <div className=" text-black">
-        
-//         <form onSubmit={submitHandler} className='flex flex-col gap-3 w-[400px] mt-[20px]'>
-//           <input value={formdata.subject} onChange={handlechange} type='text' id='subject' placeholder='Message regarding.' className='p-2 border border-slate-100 outline-none' />
-//           <input value={formdata.email} readOnly  onChange={handlechange} type='email' id='email'  className='p-2 border border-gray-200 outline-none' />
-//           <textarea value={formdata.message} onChange={handlechange} id='message' placeholder='Message here...' rows={4} className='p-2 border border-gray-200 outline-none'></textarea>
-//           <button type='submit' className='p-3 bg-gradient-to-tr from-pink-700 to-orange-600 rounded-md font-bold hover:opacity-75 text-white'>Send</button>
-//         </form>
-//       </div>
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default Contact
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -90,7 +34,7 @@ const Contact = () => {
   return (
     <div className="">
       <motion.h1
-        className="font-bold text-3xl uppercase max-w-4xl mx-auto mt-[90px]"
+        className="font-bold text-3xl uppercase max-w-4xl mx-auto mt-[40px] md:mt-[90px]"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -118,7 +62,7 @@ const Contact = () => {
         >
           <motion.form
             onSubmit={submitHandler}
-            className="flex flex-col gap-3 w-[400px] mt-[20px]"
+            className="flex flex-col gap-3 w-full max-w-md mx-auto mt-6 md:mt-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, staggerChildren: 0.2 }}
@@ -130,7 +74,7 @@ const Contact = () => {
               type="text"
               id="subject"
               placeholder="Message regarding."
-              className="p-2 border border-slate-100 outline-none hover:scale-105 focus:scale-105 transition-transform duration-300"
+              className="p-2 md:p-4 border border-slate-100 outline-none hover:scale-105 focus:scale-105 transition-transform duration-300"
               whileHover={{ scale: 1.05 }}
               whileFocus={{ scale: 1.05 }}
             />
@@ -141,7 +85,7 @@ const Contact = () => {
               readOnly
               type="email"
               id="email"
-              className="p-2 border border-gray-200 outline-none"
+              className="p-2 md:p-4 border border-gray-200 outline-none"
               whileHover={{ scale: 1.05 }}
               whileFocus={{ scale: 1.05 }}
             />
@@ -153,7 +97,7 @@ const Contact = () => {
               id="message"
               placeholder="Message here..."
               rows={4}
-              className="p-2 border border-gray-200 outline-none"
+              className="p-2 md:p-4 border border-gray-200 outline-none"
               whileHover={{ scale: 1.05 }}
               whileFocus={{ scale: 1.05 }}
             />
