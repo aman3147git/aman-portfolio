@@ -28,7 +28,7 @@ const About = () => {
     >
       
       <motion.div
-        className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-700 to-orange-600 blur-3xl opacity-15 animate-glow"
+        className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-700 to-orange-600 blur-3xl opacity-10 "
       ></motion.div>
 
       <h1 className="uppercase font-bold text-4xl text-center relative z-10">About Me</h1>
