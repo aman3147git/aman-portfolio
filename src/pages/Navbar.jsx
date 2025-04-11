@@ -73,8 +73,8 @@ const Navbar = () => {
       )}
       <div className="text-center animate__animated animate__zoomInRight">
         <a
-          href="/res_aman.pdf" 
-          download="res_aman.pdf"
+          href="/Res_1aman.pdf" 
+          download="Res_1aman.pdf"
           className="p-3 bg-gradient-to-tr from-blue-500 to-green-400 rounded-md text-white font-bold hover:opacity-80"
         >
          Resume

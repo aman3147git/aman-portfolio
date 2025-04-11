@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div id='/' className='max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 p-4 items-center text-white gap-10 md:gap-[160px] md:mt-[90px] mt-[40px]'>
+    <div id='/' className='max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 p-4 items-center text-white gap-10 md:gap-[160px] md:mt-[90px] mt-[40px] '>
       <motion.div 
         className="flex flex-col gap-3"
         initial={{ opacity: 0, x: -100 }}
@@ -61,10 +61,12 @@ const Home = () => {
         transition={{ type: 'spring', stiffness: 150, damping: 10 }}
       >
         <img 
-          className='rounded-full w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] object-cover hover:brightness-50' 
-          src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" 
+          className=' rounded-full w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] object-cover hover:brightness-50' 
+          src="/aman-portfolio/profile.jpeg" 
           alt="photo" 
         />
+
+
       </motion.div>
     </div>
   );
