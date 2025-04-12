@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross2 } from "react-icons/rx";
+
 
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  
   const menus = [
     {
       name: "Home",
@@ -49,45 +48,18 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      {sidebar && (
-        <div className="top-0  left-0  w-[60%] fixed z-10 h-full flex flex-col  bg-slate-700 text-center ease-in-out duration-50 ">
-          <ul className="flex flex-col  gap-7 mt-9 items-center">
-            {menus.map((item, index) => (
-              <li
-                key={index}
-                className="hover:scale-110 duration-75 hover:text-pink-700"
-              >
-                <Link
-                  to={item.link}
-                  smooth={true}
-                  spy={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      
       <div className="text-center animate__animated animate__zoomInRight">
         <a
-          href="/Res_1aman.pdf" 
-          download="Res_1aman.pdf"
+          href="/aman-portfolio/Res_1aman.pdf" 
+          download
           className="p-3 bg-gradient-to-tr from-blue-500 to-green-400 rounded-md text-white font-bold hover:opacity-80"
         >
          Resume
         </a>
       </div>
 
-      <button onClick={() => setSidebar(!sidebar)} className="md:hidden">
-        {sidebar ? (
-          <RxCross2 size={"30px"} />
-        ) : (
-          <GiHamburgerMenu size={"30px"} />
-        )}
-      </button>
+      
     </div>
   );
 };

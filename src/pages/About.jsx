@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AiOutlineJavaScript } from "react-icons/ai";
-import { FaReact, FaCss3Alt, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaCss3Alt, FaNodeJs, FaGit } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
-import { IoLogoFirebase } from "react-icons/io5";
+
+import { IoLogoFirebase,IoLogoDocker } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 
 const About = () => {
@@ -16,6 +17,8 @@ const About = () => {
     { label: "CSS", icon: <FaCss3Alt /> },
     { label: "Firebase", icon: <IoLogoFirebase /> },
     { label: "Nextjs", icon: <RiNextjsFill /> },
+    { label: "Docker", icon: <IoLogoDocker /> },
+    { label: "Git", icon: <FaGit /> },
   ];
 
   return (
@@ -44,7 +47,7 @@ const About = () => {
 
       <h1 className="uppercase text-3xl font-bold text-center mt-6 relative z-10">My Skills</h1>
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6 relative z-10"
+        className="grid grid-cols-2 sm:grid-cols-5 gap-6 mt-6 relative z-10"
         initial="hidden"
         animate="visible"
         variants={{

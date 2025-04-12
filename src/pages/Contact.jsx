@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+
+
 const Contact = () => {
   const [formdata, setFormdata] = useState({
     subject: '',
@@ -9,7 +11,7 @@ const Contact = () => {
   });
 
   const handlechange = (e) => {
-    setFormdata({ ...formdata, [e.target.id]: e.target.value });
+    setFormdata({ ...formdata, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
@@ -82,7 +84,7 @@ const Contact = () => {
 
         
         <motion.div
-          className="text-black"
+          className="text-black z-50"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,15 +92,13 @@ const Contact = () => {
           <motion.form
             onSubmit={submitHandler}
             className="flex flex-col gap-3 w-full max-w-md mx-auto mt-6 md:mt-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, staggerChildren: 0.2 }}
+            
           >
             <motion.input
               value={formdata.subject}
               onChange={handlechange}
               type="text"
-              id="subject"
+              name="subject"
               placeholder="Message regarding."
               className="p-2 md:p-4 border border-slate-100 outline-none hover:scale-105 focus:scale-105 transition-transform duration-300"
               whileHover={{ scale: 1.05 }}
@@ -109,7 +109,7 @@ const Contact = () => {
               value={formdata.email}
               readOnly
               type="email"
-              id="email"
+              name="email"
               className="p-2 md:p-4 border border-gray-200 outline-none"
               whileHover={{ scale: 1.05 }}
               whileFocus={{ scale: 1.05 }}
@@ -118,7 +118,7 @@ const Contact = () => {
             <motion.textarea
               value={formdata.message}
               onChange={handlechange}
-              id="message"
+              name="message"
               placeholder="Message here..."
               rows={4}
               className="p-2 md:p-4 border border-gray-200 outline-none"
@@ -129,8 +129,8 @@ const Contact = () => {
             <motion.button
               type="submit"
               className="p-3 bg-gradient-to-tr from-pink-700 to-orange-600 rounded-md font-bold hover:opacity-75 text-white"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              whileFocus={{ scale: 1.05 }}
             >
               Send
             </motion.button>
